@@ -1,0 +1,579 @@
+{
+  "generated_at": "2026-10-16T12:35:55.635772+00:00",
+  "environment": {
+    "embedding_provider": "FakeEmbeddingProvider (deterministic lexical baseline)",
+    "vector_store": "InMemoryVectorStore",
+    "llm_provider": "local (free local GGUF, qwen2.5-0.5b)",
+    "llm_key_present": false,
+    "corpus_docs": 14,
+    "eval_queries": 10
+  },
+  "retrieval": {
+    "k": 6,
+    "n_queries": 8,
+    "hit_rate@k": 1.0,
+    "recall@k (context recall)": 1.0,
+    "mrr": 1.0,
+    "ndcg@k": 0.9847,
+    "context_precision@k": 0.2083,
+    "per_query": {
+      "Q1": {
+        "kind": "factoid",
+        "n_relevant": 1,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D1",
+          "D3",
+          "N1",
+          "D8",
+          "D6",
+          "N4"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "ctx_precision@k": 0.16666666666666666,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.9038
+      },
+      "Q2": {
+        "kind": "factoid",
+        "n_relevant": 1,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D2",
+          "N3",
+          "D5",
+          "N2",
+          "D4",
+          "D6"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "ctx_precision@k": 0.16666666666666666,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.8583
+      },
+      "Q3": {
+        "kind": "factoid",
+        "n_relevant": 1,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D3",
+          "N2",
+          "N4",
+          "N3",
+          "D7",
+          "D4"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "ctx_precision@k": 0.16666666666666666,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.877
+      },
+      "Q4": {
+        "kind": "factoid",
+        "n_relevant": 1,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D4",
+          "D2",
+          "N3",
+          "N6",
+          "D3",
+          "D5"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "ctx_precision@k": 0.16666666666666666,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.9073
+      },
+      "Q5": {
+        "kind": "multi-hop",
+        "n_relevant": 2,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D5",
+          "N4",
+          "D1",
+          "D6",
+          "N3",
+          "N6"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 0.8772153153380493,
+        "ctx_precision@k": 0.3333333333333333,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.8011
+      },
+      "Q8": {
+        "kind": "conflicting",
+        "n_relevant": 2,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D7",
+          "D8",
+          "D1",
+          "N2",
+          "D5",
+          "N4"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "ctx_precision@k": 0.3333333333333333,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.8744
+      },
+      "Q9": {
+        "kind": "factoid",
+        "n_relevant": 1,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D6",
+          "D5",
+          "N3",
+          "N4",
+          "D1",
+          "D7"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "ctx_precision@k": 0.16666666666666666,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.9317
+      },
+      "Q10": {
+        "kind": "noisy",
+        "n_relevant": 1,
+        "n_retrieved": 6,
+        "retrieved": [
+          "D1",
+          "N1",
+          "D4",
+          "N3",
+          "D2",
+          "N5"
+        ],
+        "hit_rate@k": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "ctx_precision@k": 0.16666666666666666,
+        "ctx_recall@k": 1.0,
+        "top_score": 0.8382
+      }
+    }
+  },
+  "retrieval_ablation": {
+    "dense_only": {
+      "hit_rate@k": 0.875,
+      "recall@k (context recall)": 0.8125,
+      "mrr": 0.6813,
+      "ndcg@k": 0.6984,
+      "context_precision@k": 0.1667
+    },
+    "hybrid_only": {
+      "hit_rate@k": 1.0,
+      "recall@k (context recall)": 1.0,
+      "mrr": 0.9167,
+      "ndcg@k": 0.9164,
+      "context_precision@k": 0.2083
+    },
+    "hybrid_reranked": {
+      "hit_rate@k": 1.0,
+      "recall@k (context recall)": 1.0,
+      "mrr": 1.0,
+      "ndcg@k": 0.9847,
+      "context_precision@k": 0.2083
+    }
+  },
+  "robustness": {
+    "negative_rejection": {
+      "n_unanswerable": 2,
+      "abstention_branch_rate": 1.0,
+      "effective_rejection_rate_real_path": 0.0,
+      "finding": "The abstention branch works in isolation, but with the default rag_min_score=0.0 the retrieval gate never filters, so irrelevant chunks are always passed to the LLM. In production, rejection depends on the LLM following the 'say you don't know' system instruction. Raise rag_min_score to make rejection deterministic.",
+      "per_query": {
+        "Q6": {
+          "n_retrieved": 6,
+          "retrieved": [
+            "D1",
+            "D5",
+            "N2",
+            "D7",
+            "N4",
+            "D4"
+          ],
+          "relevant_retrieved": 0,
+          "retrieval_gate_filters_irrelevant": false,
+          "abstention_branch_works": true,
+          "abstention_text": "I don't have any documents that cover this yet. Upload a document first and I'll answer from it."
+        },
+        "Q7": {
+          "n_retrieved": 6,
+          "retrieved": [
+            "N3",
+            "D7",
+            "N2",
+            "D8",
+            "D1",
+            "D4"
+          ],
+          "relevant_retrieved": 0,
+          "retrieval_gate_filters_irrelevant": false,
+          "abstention_branch_works": true,
+          "abstention_text": "I don't have any documents that cover this yet. Upload a document first and I'll answer from it."
+        }
+      }
+    },
+    "noise_robustness": {
+      "with_noise_docs": {
+        "hit_rate@k": 1.0,
+        "recall@k (context recall)": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 0.9847
+      },
+      "without_noise_docs": {
+        "hit_rate@k": 1.0,
+        "recall@k (context recall)": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 0.99
+      },
+      "delta_noisy_minus_clean": {
+        "hit_rate@k": 0.0,
+        "recall@k (context recall)": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": -0.0053
+      }
+    },
+    "multi_hop": {
+      "question": "What breakthrough did Dr. Elena Voss's lab announce and when?",
+      "retrieved": [
+        "D5",
+        "N4",
+        "D1",
+        "D6",
+        "N3",
+        "N6"
+      ],
+      "hop_D5_retrieved": true,
+      "hop_D6_retrieved": true,
+      "both_hops_in_top_k": true,
+      "note": "retrieval half of multi-hop; answer composition needs LLM judge"
+    },
+    "conflicting_info": {
+      "question": "What is the population of Meridian?",
+      "retrieved": [
+        "D7",
+        "D8",
+        "D1",
+        "N2",
+        "D5",
+        "N4"
+      ],
+      "both_sources_surfaced": true,
+      "citation_count": 6,
+      "finding": "System surfaces both conflicting sources with citations but has no adjudication logic - the LLM is instructed to answer only from context, so conflicts are passed to the model/user unresolved."
+    }
+  },
+  "generation": {
+    "citation_plumbing": {
+      "n_queries": 8,
+      "citation_reference_integrity": "8/8",
+      "snippet_fidelity": "8/8",
+      "streaming_pipeline": "8/8",
+      "note": "Structural plumbing only - does not measure whether citations support claims.",
+      "per_query": {
+        "Q1": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        },
+        "Q2": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        },
+        "Q3": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        },
+        "Q4": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        },
+        "Q5": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        },
+        "Q8": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        },
+        "Q9": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        },
+        "Q10": {
+          "n_citations": 6,
+          "citations_reference_retrieved_chunks": true,
+          "snippets_match_chunk_content": true,
+          "scores_present": true,
+          "streaming_pipeline_ok": true
+        }
+      }
+    },
+    "llm_judged_quality": {
+      "status": "measured",
+      "judge_model": "qwen2.5-0.5b-local",
+      "per_query": {
+        "Q1": {
+          "answer": "RP-1 kerosene",
+          "faithfulness": {
+            "score": 0.933333,
+            "reason": "The Atlas V rocket's first stage, the Common Core Booster, burns RP-1 kerosene."
+          },
+          "answer_relevancy": {
+            "score": 0.934,
+            "reason": "The answer directly and completely addresses the QUESTION by mentioning RP-1 kerosene as the fuel burned by the Atlas rocket's first stage."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer is partially correct, but it is not entirely accurate. The Atlas V rocket's first stage, the Common Core Booster, burns RP-1 kerosene refined for rocket use together with liquid oxygen. The"
+          }
+        },
+        "Q2": {
+          "answer": "1903, 1911",
+          "faithfulness": {
+            "score": 0.933,
+            "reason": "Marie Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911."
+          },
+          "answer_relevancy": {
+            "score": 0.98,
+            "reason": "The answer directly and completely addresses the QUESTION by providing the years Marie Curie won her Nobel Prizes."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer is partially correct, as it includes the years 1903 and 1911."
+          }
+        },
+        "Q3": {
+          "answer": "The Eiffel Tower in Paris stands 330 meters tall including its antennas.",
+          "faithfulness": {
+            "score": 0.933,
+            "reason": "The Eiffel Tower in Paris stands 330 meters tall including its antennas."
+          },
+          "answer_relevancy": {
+            "score": 0.961399,
+            "reason": "The answer directly and completely addresses the question by providing the height of the Eiffel Tower, including its antennas, which is 330 meters."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer partially correct, as it mentions the height including antennas, but does not match the reference's answer which states the height including the antennas is 330 meters."
+          }
+        },
+        "Q4": {
+          "answer": "Chloroplasts",
+          "faithfulness": {
+            "score": 0.93,
+            "reason": "The answer is directly supported by the CONTEXT."
+          },
+          "answer_relevancy": {
+            "score": 0.99,
+            "reason": "The answer directly and completely addresses the question about where photosynthesis occurs in a cell."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer is partially correct, but it does not fully match the reference."
+          }
+        },
+        "Q5": {
+          "answer": "In March 2024 the Quantum Optics laboratory at the Helix Institute announced a breakthrough: a room-temperature photonic qubit with 99.2% fidelity, published in Nature Photonics. The result was achieved with silicon nitride waveguides.",
+          "faithfulness": {
+            "score": 0.933,
+            "reason": "The breakthrough announced by Dr. Elena Voss's lab in March 2024 is a room-temperature photonic qubit with 99.2% fidelity, published in Nature Photonics."
+          },
+          "answer_relevancy": {
+            "score": 0.965243,
+            "reason": "The answer directly addresses the QUESTION by mentioning the breakthrough announced by Dr. Elena Voss's lab in March 2024."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer is partially correct, but it does not fully match the reference. The reference mentions a breakthrough in photonic qubit with 99.2% fidelity, but it does not specify the year of the announc"
+          }
+        },
+        "Q8": {
+          "answer": "850,000",
+          "faithfulness": {
+            "score": 0.933,
+            "reason": "The answer is directly supported by the CONTEXT, which provides the population of Meridian as 850,000."
+          },
+          "answer_relevancy": {
+            "score": 0.9858585858585859,
+            "reason": "The answer directly and completely addresses the QUESTION by providing the population of Meridian, which is 850,000."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer is incorrect. The correct population of Meridian is 1.2 million."
+          }
+        },
+        "Q9": {
+          "answer": "Nature Photonics",
+          "faithfulness": {
+            "score": 0.933,
+            "reason": "The answer is directly supported by the CONTEXT."
+          },
+          "answer_relevancy": {
+            "score": 0.9258,
+            "reason": "The answer directly and completely addresses the QUESTION by mentioning that Nature Photonics published the room-temperature photonic qubit result."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer is partially correct, but it does not match the reference."
+          }
+        },
+        "Q10": {
+          "answer": "The Atlas V rocket's first stage, the Common Core Booster, burns RP-1 kerosene refined for rocket use together with liquid oxygen. The RD-180 engine produces about 860,000 pounds of thrust at sea level.",
+          "faithfulness": {
+            "score": 0.733,
+            "reason": "The context provides information about the Atlas V rocket's propulsion system, including the use of kerosene and liquid oxygen, as well as the RD-180 engine's thrust capacity."
+          },
+          "answer_relevancy": {
+            "score": 0.965442,
+            "reason": "The answer provides a clear explanation of the rocket launch thrust and propellant, directly addressing the QUESTION."
+          },
+          "answer_correctness": {
+            "score": 0.9,
+            "reason": "The answer is correct, but it is not the most comprehensive or precise. The reference provides more details about the propellant used in the Atlas V rocket. The answer can be improved to include more "
+          }
+        }
+      }
+    }
+  },
+  "multimodal": {
+    "memo.pdf": {
+      "status": "ready",
+      "chunk_count": 1,
+      "modality": "text",
+      "retrievable": true,
+      "ok": true
+    },
+    "deck.pptx": {
+      "status": "ready",
+      "chunk_count": 1,
+      "modality": "text",
+      "retrievable": true,
+      "ok": true
+    },
+    "notes.docx": {
+      "status": "ready",
+      "chunk_count": 1,
+      "modality": "text",
+      "retrievable": true,
+      "ok": true
+    },
+    "diagram.png": {
+      "status": "ready",
+      "chunk_count": 1,
+      "modality": "image",
+      "retrievable": true,
+      "ok": true
+    },
+    "all_ok": true
+  },
+  "operational": {
+    "latency": {
+      "n_samples": 40,
+      "p50_ms": 48.709,
+      "p95_ms": 67.705,
+      "max_ms": 141.964,
+      "path": "embed_query + InMemoryVectorStore.search + rerank stub (no LLM call)",
+      "top_k": 6
+    },
+    "token_usage": {
+      "estimator": "platform estimate_tokens (chars/4 heuristic, not tiktoken)",
+      "scope": "LLM input prompt only (context + question); excludes system prompt and output",
+      "avg_prompt_tokens": 383.1,
+      "max_prompt_tokens": 408,
+      "per_query": {
+        "Q1": {
+          "prompt_tokens_est": 394,
+          "n_context_chunks": 6
+        },
+        "Q2": {
+          "prompt_tokens_est": 392,
+          "n_context_chunks": 6
+        },
+        "Q3": {
+          "prompt_tokens_est": 362,
+          "n_context_chunks": 6
+        },
+        "Q4": {
+          "prompt_tokens_est": 384,
+          "n_context_chunks": 6
+        },
+        "Q5": {
+          "prompt_tokens_est": 381,
+          "n_context_chunks": 6
+        },
+        "Q8": {
+          "prompt_tokens_est": 362,
+          "n_context_chunks": 6
+        },
+        "Q9": {
+          "prompt_tokens_est": 382,
+          "n_context_chunks": 6
+        },
+        "Q10": {
+          "prompt_tokens_est": 408,
+          "n_context_chunks": 6
+        }
+      }
+    },
+    "cost_per_query": {
+      "credits_per_chat_query": 1,
+      "credits_per_1k_embed_tokens": 0.1,
+      "dollar_cost_per_query": "not configured - Stripe top-up is a stub; no credit->USD mapping exists yet",
+      "note": "Billing plumbing (deduction, ledger, 402 gate) is tested in test_credits.py; monetary cost needs Stripe wiring + a credit price."
+    },
+    "user_feedback": {
+      "feedback_endpoint_exists": false,
+      "feedback_rate": "n/a - no feedback instrumentation and no production traffic",
+      "recommendation": "Add POST /api/v1/chat/feedback {message_id, rating} and track thumbs-up/down rate per week as the quality KPI."
+    }
+  }
+}

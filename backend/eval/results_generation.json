@@ -1,0 +1,193 @@
+{
+  "citation_plumbing": {
+    "n_queries": 8,
+    "citation_reference_integrity": "8/8",
+    "snippet_fidelity": "8/8",
+    "streaming_pipeline": "8/8",
+    "note": "Structural plumbing only - does not measure whether citations support claims.",
+    "per_query": {
+      "Q1": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      },
+      "Q2": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      },
+      "Q3": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      },
+      "Q4": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      },
+      "Q5": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      },
+      "Q8": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      },
+      "Q9": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      },
+      "Q10": {
+        "n_citations": 6,
+        "citations_reference_retrieved_chunks": true,
+        "snippets_match_chunk_content": true,
+        "scores_present": true,
+        "streaming_pipeline_ok": true
+      }
+    }
+  },
+  "llm_judged_quality": {
+    "status": "measured",
+    "judge_model": "qwen3-4b-local",
+    "per_query": {
+      "Q1": {
+        "answer": "\n\nThe Atlas V rocket's first stage burns RP-1 kerosene refined for rocket use together with liquid oxygen [1].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The claim that the Atlas V rocket's first stage burns RP-1 kerosene refined for rocket use together with liquid oxygen is directly supported by the context."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The answer directly and completely addresses the question by specifying the fuel type (RP-1 kerosene) and mentioning the oxidizer (liquid oxygen) used in the first stage of the Atlas V rocket."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer correctly identifies that the Atlas V rocket's first stage burns RP-1 kerosene refined for rocket use together with liquid oxygen, matching the reference answer."
+        }
+      },
+      "Q2": {
+        "answer": "\n\nMarie Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911 [1].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The answer correctly identifies the years Marie Curie won her Nobel Prizes as 1903 and 1911, which are directly supported by the context."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The answer directly and completely addresses the question by specifying the years and the two Nobel Prizes won by Marie Curie."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer correctly lists the years and subjects of Marie Curie's Nobel Prizes, matching the reference answer."
+        }
+      },
+      "Q3": {
+        "answer": "\n\nThe Eiffel Tower is 330 meters tall including its antennas [1].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The claim that the Eiffel Tower is 330 meters tall including its antennas is directly supported by the context."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The answer directly and completely addresses the question with the height of the Eiffel Tower in meters."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer correctly states the height of the Eiffel Tower as 330 meters including its antennas, which matches the reference answer."
+        }
+      },
+      "Q4": {
+        "answer": "\n\nPhotosynthesis occurs in the chloroplasts of plant cells [1].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The claim that photosynthesis occurs in the chloroplasts of plant cells is directly supported by the context."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The answer directly and completely addresses the question by specifying that photosynthesis occurs in chloroplasts, which is the correct location."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer correctly identifies chloroplasts as the site of photosynthesis in plant cells, which matches the reference answer."
+        }
+      },
+      "Q5": {
+        "answer": "\n\nIn March 2024, the Quantum Optics laboratory at the Helix Institute announced a breakthrough: a room-temperature photonic qubit with 99.2% fidelity [4].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The claim that the Quantum Optics laboratory at the Helix Institute announced a breakthrough in March 2024 is directly supported by the context."
+        },
+        "answer_relevancy": {
+          "score": 0.0,
+          "reason": "The answer does not mention Dr. Elena Voss or her lab, so it does not directly address the question."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer correctly states the breakthrough and the date as in the reference."
+        }
+      },
+      "Q8": {
+        "answer": "\n\nThe population of Meridian is 850,000 residents within the city limits according to the 2023 census [1]. However, the 2024 metropolitan survey estimates the population at 1.2 million people across the greater metro area [2].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "Both claims are directly supported by the context."
+        },
+        "answer_relevancy": {
+          "score": 0.7,
+          "reason": "The answer provides two population figures but does not clearly state which one is the correct or most accurate for the city itself."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer accurately reflects both the 2023 census figure of 850,000 and the 2024 metropolitan survey estimate of 1.2 million, as stated in the reference."
+        }
+      },
+      "Q9": {
+        "answer": "\n\nThe Quantum Optics laboratory at the Helix Institute published the room-temperature photonic qubit result [1].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The context explicitly states that the Quantum Optics laboratory at the Helix Institute published the room-temperature photonic qubit result."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The answer directly and completely addresses the question by specifying the lab, institution, and providing a citation."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer correctly identifies the lab and the publication details as stated in the reference."
+        }
+      },
+      "Q10": {
+        "answer": "\n\nThe Atlas V rocket's first stage, the Common Core Booster, uses RP-1 kerosene refined for rocket use together with liquid oxygen. The RD-180 engine produces about 860,000 pounds of thrust at sea level [1].",
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The claims are directly supported by the context."
+        },
+        "answer_relevancy": {
+          "score": 0.5,
+          "reason": "The answer mentions thrust and propellant but is incomplete and focuses on a specific rocket, not a general explanation."
+        },
+        "answer_correctness": {
+          "score": 1.0,
+          "reason": "The answer matches the reference in content and structure, with the only difference being the citation [1] which is not present in the reference."
+        }
+      }
+    }
+  }
+}
