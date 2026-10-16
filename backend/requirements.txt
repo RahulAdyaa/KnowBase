@@ -1,0 +1,31 @@
+# --- Runtime ---
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+SQLAlchemy>=2.0,<3.0
+alembic>=1.13,<2.0
+psycopg2-binary>=2.9          # Postgres driver (sync)
+pgvector>=0.3                # pgvector SQLAlchemy type
+redis>=5.0                   # rate limiting / caching
+PyJWT>=2.8                   # access + refresh tokens
+bcrypt>=4.1                  # password hashing
+httpx>=0.27                  # OpenAI-compatible API calls (embeddings, chat)
+prometheus-client>=0.20      # /metrics endpoint
+python-multipart>=0.0.9      # file upload parsing
+email-validator>=2.0         # pydantic EmailStr validation
+
+# --- Dev / test ---
+pytest>=8.0
+
+# --- Multimodal extraction ---
+pypdf>=4.0                 # PDF text extraction (per page)
+python-pptx>=0.6           # PPTX slide text extraction
+python-docx>=1.1           # DOCX text extraction
+pillow>=10.0               # image metadata / thumbnails
+
+# --- Audio/video transcription (optional, CPU-friendly, no torch) ---
+faster-whisper>=1.0        # tiny model auto-downloads (~75MB) on first use
+
+# --- Free local LLM (optional, GGUF via llama.cpp, no API key) ---
+llama-cpp-python>=0.3      # LLM_PROVIDER=local; model auto-downloads (~400MB)
